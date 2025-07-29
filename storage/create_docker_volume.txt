@@ -1,0 +1,20 @@
+# docker volume create data_volume
+
+# docker run -d -p 30001:80 -v data_volume:/usr/share/nginx/html nginx
+
+apt update -y
+apt install wget -y
+
+cat <<EOF > index.html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>This is a boat</h2>
+<img src="sailboat_on_the_sea-wallpaper-1920x1080.jpg" alt="cka logo" width="600" height="600">
+
+</body>
+</html>
+EOF
+
+wget https://wallpaperswide.com/download/sailboat_on_the_sea-wallpaper-1920x1080.jpg
